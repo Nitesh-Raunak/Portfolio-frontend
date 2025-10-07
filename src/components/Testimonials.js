@@ -1,4 +1,7 @@
+import { Image } from 'react-native';
 "use client";
+
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -30,12 +33,20 @@ export default function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
           >
-            <img
+            {/* ✅ Use Next.js <Image> for optimization */}
+            <Image
               src={t.avatar}
               alt={t.name}
-              className="w-16 h-16 rounded-full mb-4"
+              width={64}
+              height={64}
+              className="w-16 h-16 rounded-full mb-4 object-cover"
             />
-            <p className="text-gray-300 italic mb-4">&quot;{t.quote}&quot;</p>
+
+            {/* ✅ Escaped quotes with &quot; to fix build error */}
+            <p className="text-gray-300 italic mb-4">
+              &quot;{t.quote}&quot;
+            </p>
+
             <h4 className="font-semibold">{t.name}</h4>
             <span className="text-gray-400 text-sm">{t.role}</span>
           </motion.div>
