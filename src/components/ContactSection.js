@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import React, { useState } from "react";
+import React, { useState } from "react"; // Consolidated imports to prevent duplication
 import { FaLinkedin, FaTwitter, FaGithub, FaDev, FaMedium } from "react-icons/fa";
 
 // IMPORTANT: Read the public environment variable here
@@ -19,7 +18,7 @@ const ContactSection = () => {
     setLoading(true);
     setStatus("");
 
-    // FIX APPLIED HERE: Use the dynamic API_BASE_URL
+    // Using the dynamic API_BASE_URL
     const apiEndpoint = `${API_BASE_URL}/api/contact`;
 
     try {
