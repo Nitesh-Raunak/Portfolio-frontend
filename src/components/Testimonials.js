@@ -35,7 +35,7 @@ export default function Testimonials() {
               alt={t.name}
               className="w-16 h-16 rounded-full mb-4"
             />
-            <p className="text-gray-300 italic mb-4">"{t.quote}"</p>
+            <p className="text-gray-300 italic mb-4">&quot;{t.quote}&quot;</p>
             <h4 className="font-semibold">{t.name}</h4>
             <span className="text-gray-400 text-sm">{t.role}</span>
           </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import {ReactTyped} from "react-typed";
+import { ReactTyped } from "react-typed";
 import Particles from "react-tsparticles";
 
 
@@ -8,7 +8,7 @@ import Particles from "react-tsparticles";
 export default function Hero() {
   // Initialize particles
   // const particlesInit = async (engine) => {
-  //   await loadSlim(engine); // Use loadSlim to initialize the particles engine
+  //   await loadSlim(engine); // Use loadSlim to initialize the particles engine
   // };
 
   return (
@@ -51,7 +51,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">Hi, I'm Nitesh Gupta 👋</h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">Hi, I&apos;m Nitesh Gupta 👋</h1>
 
         <ReactTyped
           className="text-xl md:text-2xl text-blue-400 font-medium mb-6"
