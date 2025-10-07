@@ -1,4 +1,4 @@
-import { Image } from 'react-native';
+
 "use client";
 
 import Image from "next/image";
@@ -33,20 +33,14 @@ export default function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
           >
-            {/* ✅ Use Next.js <Image> for optimization */}
             <Image
               src={t.avatar}
               alt={t.name}
               width={64}
               height={64}
-              className="w-16 h-16 rounded-full mb-4 object-cover"
+              className="rounded-full mb-4"
             />
-
-            {/* ✅ Escaped quotes with &quot; to fix build error */}
-            <p className="text-gray-300 italic mb-4">
-              &quot;{t.quote}&quot;
-            </p>
-
+            <p className="text-gray-300 italic mb-4">&quot;{t.quote}&quot;</p>
             <h4 className="font-semibold">{t.name}</h4>
             <span className="text-gray-400 text-sm">{t.role}</span>
           </motion.div>
