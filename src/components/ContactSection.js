@@ -1,8 +1,13 @@
-import React, { useState } from "react"; // Consolidated imports to prevent duplication
+import React, { useState } from "react";
 import { FaLinkedin, FaTwitter, FaGithub, FaDev, FaMedium } from "react-icons/fa";
 
-// IMPORTANT: Read the public environment variable here
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+
+if (!API_BASE_URL) {
+  throw new Error(
+    "NEXT_PUBLIC_API_URL is not defined! Please set it in your environment variables."
+  );
+}
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -18,8 +23,8 @@ const ContactSection = () => {
     setLoading(true);
     setStatus("");
 
-    // Using the dynamic API_BASE_URL
     const apiEndpoint = `${API_BASE_URL}/api/contact`;
+    console.log("API Endpoint:", apiEndpoint);
 
     try {
       const response = await fetch(apiEndpoint, {
@@ -29,15 +34,17 @@ const ContactSection = () => {
       });
 
       const result = await response.json();
-      if (result.success) {
-        setStatus("Your message was sent successfully!");
+
+      if (response.ok && result.success) {
+        setStatus("✅ Your message was sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send message.");
+        setStatus("❌ Failed to send message. Please try again later.");
+        console.error("Response Error:", result);
       }
     } catch (error) {
-      setStatus("Error connecting to server. Check console for details.");
-      console.error("API Call Error:", error.message);
+      setStatus("⚠️ Error connecting to server. Check console for details.");
+      console.error("API Call Error:", error?.message || error);
     } finally {
       setLoading(false);
     }
@@ -83,12 +90,27 @@ const ContactSection = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 rounded font-semibold transition ${loading ? "bg-gray-500 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
-                }`}
+              className={`w-full py-3 rounded font-semibold transition ${
+                loading
+                  ? "bg-gray-500 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
-            {status && <p className="mt-3">{status}</p>}
+            {status && (
+              <p
+                className={`mt-3 text-center ${
+                  status.includes("✅")
+                    ? "text-green-400"
+                    : status.includes("❌")
+                    ? "text-red-500"
+                    : "text-yellow-400"
+                }`}
+              >
+                {status}
+              </p>
+            )}
           </form>
 
           {/* Social Icons + Map */}
@@ -147,7 +169,7 @@ const ContactSection = () => {
                 width="100%"
                 height="250"
                 className="rounded-lg border-0"
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
               ></iframe>
             </div>

@@ -3,9 +3,6 @@
 import React, { useEffect, useState } from "react";
 
 
-
-
-
 const AdminMessages = () => {
   const [messages, setMessages] = useState([]);
 

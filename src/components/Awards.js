@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 const awards = [
-  { title: "Top Developer 2025", org: "Tech Awards", icon: "/images/award1.png" },
-  { title: "Full Stack Certification", org: "Coursera", icon: "/images/award2.png" },
+  { title: "Top Developer 2025", org: "Tech Awards", icon: "/images/award1.jpg" },
+  { title: "Full Stack Certification", org: "Coursera", icon: "/images/award2.jpg" },
 ];
 
 export default function Awards() {

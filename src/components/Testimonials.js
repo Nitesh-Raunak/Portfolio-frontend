@@ -8,13 +8,13 @@ const testimonials = [
   {
     name: "John Doe",
     role: "CEO, TechCorp",
-    avatar: "/images/client1.jpg",
+    avatar: "/projects/client1.jpg", // <-- Use public path
     quote: "Nitesh built our web app from scratch and it’s amazing!",
   },
   {
     name: "Jane Smith",
     role: "CTO, InnovateX",
-    avatar: "/images/client2.jpg",
+    avatar: "/projects/client2.jpg", // <-- Use public path
     quote: "Professional, reliable, and highly skilled developer.",
   },
 ];
