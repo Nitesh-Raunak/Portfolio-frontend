@@ -52,7 +52,16 @@ export default [
     link: "https://github.com/Nitesh-Raunak/SevaLink-Web",
     image: "/projects/Ambulance.jpg",
     category: "Healthcare Tech",
-    tech: ["MongoDB", "Express", "React Native", "Node.js", "WebSockets", "Google Maps API"]
-}
+    tech: ["MongoDB", "Express", "React Native", "Node.js", "WebSockets", "Google Maps API"],
+    demo: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML"
+},
+{
+    title: "eAuction",
+    description: "MERN app for online auctions",
+    link: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML",
+    image: "/projects/eAuction.jpg",
+    category: "Web",
+     tech: ["frontend"], // ✅ This must exist
+  },
 
 ];
