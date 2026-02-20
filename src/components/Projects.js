@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from "framer-motion";
 import { FaReact, FaMobileAlt, FaGlobe } from "react-icons/fa";
 import { DiNodejsSmall } from "react-icons/di"; // Node.js icon
+import Image from "next/image";
 
 
 export default function Projects({ projects }) {
@@ -25,11 +26,10 @@ export default function Projects({ projects }) {
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`px-4 py-2 rounded-lg font-medium transition ${
-              selectedCategory === cat
+            className={`px-4 py-2 rounded-lg font-medium transition ${selectedCategory === cat
                 ? "bg-blue-600 text-white"
                 : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-            }`}
+              }`}
             onClick={() => setSelectedCategory(cat)}
           >
             {cat}
@@ -50,9 +50,11 @@ export default function Projects({ projects }) {
             onClick={() => setModalProject(proj)}
           >
             {/* Project Image */}
-            <img
+            <Image
               src={proj.image}
               alt={proj.title}
+              width={400}
+              height={320}
               className="w-full h-80 object-cover transition-transform group-hover:scale-105"
             />
 
@@ -93,9 +95,11 @@ export default function Projects({ projects }) {
               ✕
             </button>
             <h3 className="text-2xl font-bold mb-4">{modalProject.title}</h3>
-            <img
+            <Image
               src={modalProject.image}
               alt={modalProject.title}
+              width={500}
+              height={256}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
             <p className="text-gray-300 mb-4">{modalProject.description}</p>
