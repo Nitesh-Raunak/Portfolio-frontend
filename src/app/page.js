@@ -86,7 +86,7 @@ export default function Home() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start mt-4">
             <motion.a
-              href="/Nitesh_kumar.pdf"
+              href="/Nitesh Kumar Sah.pdf"
               className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white font-medium"
               download
               whileHover={{ scale: 1.05 }}

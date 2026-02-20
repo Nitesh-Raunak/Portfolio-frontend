@@ -1,26 +1,3 @@
-// const projects = [
-//   {
-//     title: "Kaamwala",
-//     description: "MERN app to find workers easily",
-//     link: "https://github.com/Nitesh-Raunak/Kaamwala",
-//   },
-//   {
-//     title: "Portfolio Website",
-//     description: "This portfolio built with Next.js",
-//     link: "https://github.com/Nitesh-Raunak/Portfolio",
-//   },
-//   {
-//     title: "Portfolio Website",
-//     description: "A modern personal portfolio built with Next.js and Tailwind CSS.",
-//     image: "/projects/portfolio.png",
-//     tech: ["Next.js", "Tailwind", "React"],
-//     category: "Web",
-//     link: "https://github.com/Nitesh-Raunak/portfolio",
-//   },
-// ];
-// export default projects;
-
-
 export default [
   {
     title: "Portfolio Website",
@@ -53,11 +30,10 @@ export default [
     image: "/projects/Ambulance.jpg",
     category: "Healthcare Tech",
     tech: ["MongoDB", "Express", "React Native", "Node.js", "WebSockets", "Google Maps API"],
-    demo: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML"
-},
+ },
 {
     title: "eAuction",
-    description: "MERN app for online auctions",
+    description: "A platform for online auctions",
     link: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML",
     image: "/projects/eAuction.jpg",
     category: "Web",
