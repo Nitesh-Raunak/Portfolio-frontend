@@ -1,43 +1,58 @@
-export default [
+const projects = [
   {
-    title: "Portfolio Website",
-    description: "A modern personal portfolio built with Next.js and Tailwind CSS.",
-    image: "/projects/portfolio.jpg",
-    tech: ["Next.js", "Tailwind", "React"], // ✅ This must exist
-    category: "Web",
-    link: "https://github.com/Nitesh-Raunak/portfolio",
+    title: "SevaLink — Emergency Ambulance Platform",
+    description:
+      "Production-grade ambulance dispatch and coordination platform for India. Built a NestJS monorepo with 80+ PostgreSQL entities, real-time GPS tracking via Socket.IO, a serial-offer dispatch algorithm using BullMQ (inspired by Uber's model), Cashfree Easy Split payments, PostGIS geospatial queries, Firebase FCM push notifications, and 150+ REST endpoints across 5 user roles (Patient, Driver, Hospital, Fleet, Admin). Live on Render with 28/28 production infra tests passing.",
+    image: "/projects/Ambulance.jpg",
+    tech: [
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "PostGIS",
+      "Redis",
+      "Socket.IO",
+      "BullMQ",
+      "Firebase FCM",
+      "Cashfree",
+      "Google Maps API",
+    ],
+    category: "Full-stack",
+    link: "https://github.com/Nitesh-Raunak/SevaLink-Web",
+    liveLink: "https://sevalink-backend-api.onrender.com",
+    highlights: [
+      "Serial-offer dispatch algorithm with radius expansion (5→20km)",
+      "Real-time GPS tracking pipeline with Redis-first storage",
+      "Pure ledger wallet architecture (no stored balances)",
+      "Multi-role JWT auth with token reuse detection",
+    ],
   },
   {
-    title: "SevaLink App",
-    description: "A cross-platform mobile app built with React Native.",
+    title: "CAEVS — Context-Aware Attendance System",
+    description:
+      "Smart attendance system built with Flutter and Firebase that uses contextual validation to prevent proxy attendance. Implemented Cloud Functions for server-side validation logic and real-time attendance state management.",
     image: "/projects/mobile.jpg",
-    tech: ["React Native", "Expo"], // ✅ This must exist
+    tech: ["Flutter", "Firebase", "Cloud Functions", "Dart"],
     category: "Mobile",
-    link: "https://github.com/Nitesh-Raunak/SevaLink-App",
+    link: "https://github.com/Nitesh-Raunak",
   },
   {
     title: "Kaamwala",
-    description: "MERN app to find workers easily",
-    link: "https://github.com/Nitesh-Raunak/Kaamwala",
+    description:
+      "Full-stack MERN platform connecting people who need household and local services with nearby workers. Features user auth, worker profiles, job posting, and real-time status updates.",
     image: "/projects/kaamwala.jpg",
-    category: "Web",
-     tech: ["MongoDB", "Express", "React", "Node.js"], // ✅ This must exist
+    tech: ["MongoDB", "Express.js", "React", "Node.js"],
+    category: "Full-stack",
+    link: "https://github.com/Nitesh-Raunak/Kaamwala",
   },
   {
-    title: "SevaLink: Emergency Ambulance MVP",
-    description: "Built the core Minimum Viable Product (MVP) for an emergency healthcare logistics platform, focusing on instant, reliable ambulance dispatch. Key feature is real-time, bi-directional GPS tracking and upfront transparent pricing to disrupt the fragmented, unreliable, and call-based emergency transport market in India.",
-    link: "https://github.com/Nitesh-Raunak/SevaLink-Web",
-    image: "/projects/Ambulance.jpg",
-    category: "Healthcare Tech",
-    tech: ["MongoDB", "Express", "React Native", "Node.js", "WebSockets", "Google Maps API"],
- },
-{
     title: "eAuction",
-    description: "A platform for online auctions",
-    link: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML",
+    description:
+      "Frontend web app for online auctions. Users can browse auction listings and place bids with a clean responsive UI.",
     image: "/projects/eAuction.jpg",
+    tech: ["HTML", "CSS", "JavaScript"],
     category: "Web",
-     tech: ["frontend"], // ✅ This must exist
+    link: "https://nitesh-raunak.github.io/goods_eAUCTION/index.HTML",
   },
-
 ];
+
+export default projects;

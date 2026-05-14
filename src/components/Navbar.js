@@ -9,11 +9,11 @@ import { Menu, X } from "lucide-react"; // hamburger & close icons
 
 const navItems = [
   { name: "Home", href: "#hero" },
+  { name: "Skills", href: "#techstack" },
   { name: "Projects", href: "#projects" },
-  { name: "Testimonials", href: "#testimonials" },
   { name: "Blog", href: "#blog" },
-  { name: "Awards", href: "#awards" },
   { name: "About", href: "#about" },
+  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 

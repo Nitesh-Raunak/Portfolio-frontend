@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Nitesh Gupta",
+  title: "Nitesh Kumar Sah",
   description: "Personal Portfolio built with Next.js",
 };
 

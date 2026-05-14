@@ -195,12 +195,37 @@ Remember: deployment isn’t magic — it’s **systematic debugging, patience, 
 Soon, seeing your live app with working APIs will feel like leveling up from rookie to pro.  
 
 **Start small, deploy early, fix issues, and iterate. That’s the real deployment journey.**
-– Nitesh Raunak
+– Nitesh Kumar Sah
 
   `
 }
 
   ,
+  {
+    id: "building-sevalink-dispatch",
+    title: "Building a Real-Time Ambulance Dispatch System: Lessons from SevaLink",
+    date: "Mar 2026",
+    content: `
+Building SevaLink taught me more about backend engineering than any tutorial.
+
+## The Problem
+India's ambulance ecosystem is fragmented. No apps, just phone calls. SevaLink is my attempt to build Uber for ambulances.
+
+## The Stack
+NestJS (TypeScript) + PostgreSQL + PostGIS + Redis + Socket.IO + BullMQ.
+Every tech choice had a reason: PostGIS for geospatial driver search, BullMQ for serial offer dispatch, Socket.IO for realtime GPS tracking across 5 user roles.
+
+## The Hardest Part
+The dispatch algorithm. A patient creates a booking → system finds the nearest available driver → offers the trip for 30 seconds → if rejected, moves to the next driver and expands the radius. Race conditions are prevented with Redis NX locks + PostgreSQL SELECT FOR UPDATE + offer number versioning.
+
+## Lessons
+1. Build for failure first. Redis can go down. Your system must degrade gracefully.
+2. Pure ledger wallets (no stored balance column) prevent race conditions on concurrent payments.
+3. Fire-and-forget side effects after DB transactions cut payment processing from 7s to 240ms.
+
+SevaLink is live. The infra test suite passes 28/28. And I'm still building.
+  `,
+},
 ];
 
 export default function Blog() {

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const awards = [
   { title: "Top Developer 2025", org: "Tech Awards", icon: "/images/award1.jpg" },
@@ -20,7 +21,7 @@ export default function Awards() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
           >
-            <img src={a.icon} alt={a.title} className="w-16 h-16" />
+            <Image src={a.icon} alt={a.title} width={64} height={64} className="w-16 h-16" />
             <div>
               <h4 className="font-semibold">{a.title}</h4>
               <span className="text-gray-400 text-sm">{a.org}</span>

@@ -46,12 +46,17 @@ export default function Hero() {
       >
         {/* ✅ Escaped apostrophe with &apos; to fix lint error */}
         <h1 className="text-5xl md:text-6xl font-bold mb-4">
-          Hi, I&apos;m Nitesh Gupta 👋
+          Hi, I&apos;m Nitesh Kumar Sah 👋
         </h1>
 
         <ReactTyped
           className="text-xl md:text-2xl text-blue-400 font-medium mb-6"
-          strings={["I build Web Apps", "I build Mobile Apps", "I design UI/UX"]}
+          strings={[
+            "I build backend systems",
+            "I build real-time platforms",
+            "I engineer full-stack solutions",
+            "I code for healthcare impact",
+          ]}
           typeSpeed={50}
           backSpeed={40}
           loop

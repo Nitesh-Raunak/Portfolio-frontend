@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaTwitter, FaGithub, FaDev, FaMedium } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub, FaMedium } from "react-icons/fa";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -141,14 +141,6 @@ const ContactSection = () => {
                   className="hover:text-gray-400 transition"
                 >
                   <FaGithub />
-                </a>
-                <a
-                  href="https://dev.to/YOUR_PROFILE"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-purple-500 transition"
-                >
-                  <FaDev />
                 </a>
                 <a
                   href="https://medium.com/@niteshkumarsah401440"
