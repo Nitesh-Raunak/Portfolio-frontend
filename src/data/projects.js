@@ -17,8 +17,8 @@ const projects = [
       "Google Maps API",
     ],
     category: "Full-stack",
-    link: "https://github.com/Nitesh-Raunak/SevaLink-Web",
-    liveLink: "https://sevalink-backend-api.onrender.com",
+    link: "https://sevalinkcare.com",
+    liveLink: "https://api.sevalinkcare.com",
     highlights: [
       "Serial-offer dispatch algorithm with radius expansion (5→20km)",
       "Real-time GPS tracking pipeline with Redis-first storage",
@@ -33,7 +33,7 @@ const projects = [
     image: "/projects/mobile.jpg",
     tech: ["Flutter", "Firebase", "Cloud Functions", "Dart"],
     category: "Mobile",
-    link: "https://github.com/Nitesh-Raunak",
+    link: "https://github.com/Nitesh-Raunak/CAEVS--Smart-Attendance",
   },
   {
     title: "Kaamwala",

@@ -70,15 +70,15 @@ export default function FlagshipProject() {
 
         <div className="flex gap-4">
           <a
-            href="https://github.com/Nitesh-Raunak/SevaLink-Web"
+            href="https://sevalinkcare.com"
             target="_blank"
             rel="noreferrer"
             className="px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition"
           >
-            View on GitHub
+            View Website
           </a>
           <a
-            href="https://sevalink-backend-api.onrender.com"
+            href="https://api.sevalinkcare.com"
             target="_blank"
             rel="noreferrer"
             className="px-5 py-2 border border-gray-600 hover:bg-gray-800 rounded-lg text-sm font-medium transition"
